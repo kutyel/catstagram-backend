@@ -1,0 +1,29 @@
+{
+  "name": "catstagram-backend",
+  "version": "1.0.0",
+  "description": "Fake Backend for my Catstagram examples",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kutyel/catstagram-backend.git"
+  },
+  "keywords": [
+    "catstagram",
+    "cats",
+    "api",
+    "cats-api"
+  ],
+  "author": "kutyel <flaviocorpa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kutyel/catstagram-backend/issues"
+  },
+  "homepage": "https://github.com/kutyel/catstagram-backend#readme",
+  "dependencies": {
+    "hapi": "^17.7.0"
+  }
+}
