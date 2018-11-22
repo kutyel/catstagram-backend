@@ -5,27 +5,28 @@ const Hapi = require('hapi')
 const posts = require('./data/posts.json')
 const comments = require('./data/comments.json')
 
+const routes = {
+  method: 'GET',
+  options: {
+    cors: true,
+  },
+}
+
 const server = Hapi.server({
   host: 'localhost',
-  port: 1234,
+  port: 8080,
 })
 
 server.route({
-  method: 'GET',
+  ...routes,
   path: '/',
   handler: () => posts,
-  options: {
-    cors: true,
-  },
 })
 
 server.route({
-  method: 'GET',
+  ...routes,
   path: '/comments/{postId}',
   handler: ({ params: { postId } }) => comments[postId],
-  options: {
-    cors: true,
-  },
 })
 
 const init = async () => {
